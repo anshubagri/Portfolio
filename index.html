@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anshu Singh Bagri | Portfolio</title>
+  <link rel="stylesheet" href="./css/style.css"/>
+  <link rel="stylesheet" href="./css/style.css?v=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Portfolio</div>
+      <div class="hamburger">&#9776;</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="https://github.com/anshubagri" target="_blank">GitHub Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-left">
+        <h3>Hi, I am</h3>
+        <h1>Anshu Singh Bagri</h1>
+        <h2>I am a <span id="typing"></span></h2>
+        <p>I’m an aspiring software engineer & web developer with hands-on experience developing secure authentication systems, intelligent chatbots, and real-time interactive games. I’ve sharpened my skills through self-driven projects, certifications, and consistent problem-solving, showcasing my ability to build practical, user-focused digital solutions.</p>
+        <a href="./assets/CV.pdf" target="_blank" class="btn">Check Resume</a>
+      </div>
+      <div class="about-right">
+        <div class="profile-pic-container">
+          <img src="./images/anshu.jpg" alt="Anshu Singh Bagri" class="profile-pic" />
+          <div class="rotating-lights"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-section">
+    <h2>Here are some of my skills on which I have been working on for the past 2 years.</h2>
+    <div class="skills-grid">
+      <div class="skill-box">
+        <div class="skill-icon"><i class="fas fa-code skill-icon"></i></div>
+        <h3>Programming Languages</h3>
+        <p>C, C++, Python</p>
+      </div>
+      <div class="skill-box">
+        <div class="skill-icon">
+          <i class="fab fa-html5 skill-icon" style="color:#E44D26;"></i>
+          <i class="fab fa-css3-alt skill-icon" style="color:#1572B6;"></i>
+          <i class="fab fa-js-square skill-icon" style="color:#F7DF1E;"></i>
+        </div>
+        <h3>Web Technologies</h3>
+        <p>HTML, CSS, JavaScript</p>
+      </div>
+      <div class="skill-box">
+        <div class="skill-icon"><i class="fas fa-database skill-icon"></i></div>
+        <h3>Databases</h3>
+        <p>MySQL, Oracle</p>
+      </div>
+      <div class="skill-box">
+        <div class="skill-icon"><i class="fas fa-cogs skill-icon"></i></div>
+        <h3>Concepts</h3>
+        <p>OOPS, Data Structures and Algorithms</p>
+      </div>
+      <div class="skill-box">
+        <div class="skill-icon"><i class="fas fa-tools"></i></div>
+        <h3>Tools</h3>
+        <p>VS Code, GitHub, Netlify</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="experience-section">
+    <h2>Experience</h2>
+    <div class="experience-box">
+      <h3>Web Developer Intern</h3>
+      <h4>Codec Technologies (Nov 2024 – Feb 2025)</h4>
+      <p>Developed responsive and interactive web components during my internship, implementing dynamic form validation, user input handling, and real-time feedback using HTML, CSS, and JavaScript. Contributed to UI enhancements across multiple pages, ensuring mobile responsiveness and improved accessibility.</p>
+      <p><strong>Skills Utilized:</strong> HTML, CSS, JavaScript</p>
+    </div>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card" data-index="0">
+        <img src="./images/project1.png" alt="Secure User Authentication System" />
+        <h3>Secure User Authentication System</h3>
+        <p>Complete login system using PHP, JS, MySQL</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JS, PHP, MySQL</p>
+      </div>
+
+      <div class="project-card" data-index="1">
+        <img src="./images/project2.png" alt="Password Strength Analyzer" />
+        <h3>Password Strength Analyzer</h3>
+        <p>Entropy-based strength analysis & suggestions</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+      </div>
+
+      <div class="project-card" data-index="2">
+        <img src="./images/project3.png" alt="Aurora: Chatbot" />
+        <h3>Aurora: Chatbot – Your Smart Chat Companion</h3>
+        <p>Intelligent chatbot interface with multi-inputs</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JS</p>
+      </div>
+
+      <div class="project-card" data-index="3">
+        <img src="./images/project4.png" alt="Rock Paper Scissors Game" />
+        <h3>Rock Paper Scissors Game</h3>
+        <p>Modern browser-based classic game with animations</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+      </div>
+    </div>
+
+    <div id="project-modal" class="project-modal" style="display:none;">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="" />
+        <p id="modal-description"></p>
+        <p><strong>Technologies Used:</strong> <span id="modal-tech"></span></p>
+        <div class="modal-buttons">
+          <a href="#" id="view-code" target="_blank" class="btn">View Code</a>
+          <a href="#" id="view-app" target="_blank" class="btn">View App</a>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+  <section id="education" class="education-section">
+    <h2>Education</h2>
+    <div class="edu-entry">
+      <h3>Graphic Era Deemed to be University, Dehradun</h3>
+      <p>Bachelor of Computer Application | Aug 2023 – July 2026 | Grade: 8.25 CGPA</p>
+      <p>Coursework: Data Structures and Algorithms, OOPS, DBMS, OS, CN</p>
+    </div>
+    <div class="edu-entry">
+      <h3>Shri Guru Ram Rai Patel Nagar, Dehradun</h3>
+      <p>CBSE (XII) | Commerce with Maths | April 2022 – April 2023 | Grade: 84.5%</p>
+    </div>
+    <div class="edu-entry">
+      <h3>Shri Guru Ram Rai Patel Nagar, Dehradun</h3>
+      <p>CBSE (X) | April 2020 – April 2021 | Grade: 76.3%</p>
+      <p>Subjects: English, Hindi, Mathematics, Science, Social Science, Computer Applications</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Feel free to reach out to me for any questions or opportunities!</h2>
+    <form action="send_email.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="subject" placeholder="Subject" required />
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>Anshu Singh Bagri</p>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=100020690419559" target="_blank">Facebook</a>
+      <a href="https://x.com/anshuthekiddd" target="_blank">Twitter</a>
+      <a href="https://www.linkedin.com/in/anshu-singh-bagri-5a0623310 " target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/sunshinebagri/" target="_blank">Instagram</a>
+    </div>
+    <p>&copy; 2025 Anshu Singh Bagri. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
