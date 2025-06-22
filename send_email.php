@@ -2,10 +2,10 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php'; // Loads PHPMailer and Dotenv
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+require 'config.php'; // Load EMAIL_USERNAME & EMAIL_PASSWORD
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/SMTP.php';
+require 'phpmailer/Exception.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = strip_tags(trim($_POST["name"]));
@@ -25,14 +25,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = $_ENV['EMAIL_USERNAME'];
-        $mail->Password   = $_ENV['EMAIL_PASSWORD'];
+        $mail->Username   = EMAIL_USERNAME;
+        $mail->Password   = EMAIL_PASSWORD;
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
         // Email Headers
-        $mail->setFrom($_ENV['EMAIL_USERNAME'], 'Your Website');
-        $mail->addAddress('yourdestination@email.com'); // Replace with your email
+        $mail->setFrom(EMAIL_USERNAME, 'Your Website');
+        $mail->addAddress('yourdestination@email.com'); // Replace with your receiving email
 
         $mail->isHTML(false);
         $mail->Subject = "New Contact: $subject";
